@@ -11,9 +11,7 @@ class App < Sinatra::Base
   end
   
   post '/checkout' do
-    session[:item] = [] unless session[:item]
-    
-    session[:item] << params['item']
+    session[:item] = params['item']
     
     @items = session[:item]
     
