@@ -11,11 +11,11 @@ class App < Sinatra::Base
   end
   
   post '/checkout' do
-    session[:items] = [] unless session[:items]
+    session[:item] = [] unless session[:item]
     
-    session[:items] << params['item']
+    session[:item] << params['item']
     
-    @items = session[:items]
+    @items = session[:item]
     
     erb :index
   end
