@@ -14,5 +14,7 @@ class App < Sinatra::Base
     session[:items] = [] unless session[:items]
     
     session[:items] << params['item']
+    
+    erb :index
   end
 end
