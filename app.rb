@@ -15,6 +15,8 @@ class App < Sinatra::Base
     
     session[:items] << params['item']
     
+    @items = session[:items]
+    
     erb :index
   end
 end
