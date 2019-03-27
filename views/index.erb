@@ -1,5 +1,7 @@
-<% @items.each do |i|%>
-  <p><%= i %></p>
+<% if @items %>
+  <% @items.each do |i|%>
+    <p><%= i %></p>
+  <% end %>
 <% end %>
 
 <form action='/checkout' method='post'>
